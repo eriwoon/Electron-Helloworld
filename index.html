@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="default.css">
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+    <!-- All of the Node.js APIs are available in this renderer process. -->
+    We are using Node.js <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.
+
+    </br>
+    <button id="openfile">open file</button>
+    <p id="selected-file"></p>
+    <table id="records">
+      <thead><tr id="header"></th></thead>
+      <tbody><tr id="body"></tr></tbody>
+    </table>
+
+    <table>
+      <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Job Title</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>James</td>
+        <td>Matman</td>
+        <td>Chief Sandwich Eater</td>
+      </tr>
+      <tr>
+        <td>The</td>
+        <td>Tick</td>
+        <td>Crimefighter Sorta</td>
+      </tr>
+      </tbody>
+    </table>
+    <script>
+      // You can also require other files to run in this process
+      console.log('before enther renderer.js');
+      require('./renderer.js')
+    </script>
+  </body>
+</html>
